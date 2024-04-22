@@ -1,0 +1,82 @@
+@use '@greyhoundstudio/bp' as *;
+@use './variables' as *;
+@use './forms';
+
+* {
+	box-sizing: border-box;
+	outline-color: $primary;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background: $siteBackground;
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+	font-size: 1.6rem;
+	color: $text;
+}
+
+h1 {
+	font-size: 3.6rem;
+}
+
+h1, h2 {
+	margin: 0;
+}
+
+.a11y {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.main {
+	display: grid;
+	grid-template-rows: auto 1fr 1fr;
+	padding: 10px;
+	gap: 15px;
+	height: 100svh;
+	background: $siteBackground;
+
+	.title {
+		grid-column: -1 / 1;
+		text-align: center;
+	}
+
+	.input {
+		display: grid;
+		grid-template-rows: auto 1fr;
+	}
+
+	.results {
+		.list {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 5px;
+
+			.result {
+				display: inline-block;
+				background: $error;
+				color: white;
+				padding: 5px;
+				margin: 0;
+			}
+		}
+	}
+
+	@include bp(md) {
+		padding: 15px;
+		grid-template-columns: repeat( 2, 1fr );
+		grid-template-rows: auto 1fr;
+		gap: 25px 15px;
+	}
+}

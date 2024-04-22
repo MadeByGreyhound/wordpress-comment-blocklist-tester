@@ -1,0 +1,43 @@
+@use './variables' as *;
+
+.label {
+	display: block;
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+
+input:not([type=submit]):not([type=file]),
+textarea {
+	padding: 8px 12px;
+	border-radius: 0;
+	border: 1px solid $greyDarkest;
+	transition: $transition;
+	background: $grey;
+	box-shadow: none;
+	appearance: none;
+	resize: none;
+
+	&:focus {
+		background: $greyDark;
+		border-color: $greyDarkest;
+	}
+}
+
+input[type="submit"] {
+	border: none;
+	background: $primary;
+	padding: 10px 15px;
+	border-radius: 4px;
+	color: white;
+	float: right;
+	transition: $transition;
+	font-weight: 600;
+
+	&:hover,
+	&:focus {
+		background: $primaryDark;
+		cursor: pointer;
+		outline: none;
+	}
+}

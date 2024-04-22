@@ -1,0 +1,23 @@
+{
+  "author": "Greyhound Studio <hello@greyhound.studio>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "laravel-mix": "^6.0.49",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.2.2",
+    "vue-loader": "^16.8.3"
+  },
+  "dependencies": {
+    "@greyhoundstudio/bp": "^1.0.0",
+    "locutus": "^2.0.32",
+    "modern-normalize": "^2.0.0",
+    "vue": "^3.4.24"
+  },
+  "scripts": {
+    "watch": "npx mix watch",
+    "dev": "npx mix",
+    "prod": "npx mix --production",
+    "build": "npx mix --production"
+  }
+}
